@@ -1,3 +1,5 @@
+
+//  QUERY SELECTORS
 const headLine = document.querySelector('.logo-heading');
 console.log('headline:', headLine);
 const navHeader = document.querySelector('.main-navigation');
@@ -6,23 +8,54 @@ const navItems = document.querySelectorAll('.nav-link');
 console.log('nav items:', navItems);
 const yellowBus = document.querySelector('.intro img');
 console.log('yellow bus:', yellowBus);
-const travelPics = document.querySelectorAll('.img-content');
-console.log('travel pics:', travelPics);
+const wordDiv = document.querySelectorAll('.content-section');
+console.log('word div:', wordDiv);
 const boatPic = document.querySelector('.content-destination img');
 console.log('boat pic:',boatPic);
-// const buttons = document.querySelectorAll('.destination btn');
-// console.log('buttons:', buttons);
-const copyRight = document.querySelector('.footer');
+const buttons = document.querySelectorAll('.destination btn');
+console.log('buttons:', buttons);
+const copyRight = document.querySelector('.footer p');
 console.log('copyright:', copyRight);
 
+// MOUSEOVER EVENT
 function mouseOver(event){
-    if (event.type === 'mouseover') {
         event.target.style.backgroundColor = "red";
-    } else if (event.type === 'mouseup') {
-        event.target.style.backgroundColor = "white";
-    }
-};
-
+    };
 headLine.addEventListener('mouseover', mouseOver);
 
+// MOUSEOUT EVENT
+function mouseOut(event){
+    event.target.style.backgroundColor = "white";
+};
+headLine.addEventListener('mouseout', mouseOut);
 
+// KEYDOWN EVENT
+function escapeKey(event){
+    if (event.key === 'Escape'){
+        alert(document.style.borderColor = "pink", event.target.style.boarderSize = "5px");
+        }
+    };
+yellowBus.addEventListener('keydown', escapeKey);
+
+// // ONCLICK EVENT
+function clickIt(event){
+    window.location = 'https://www.buses.com/'
+};
+buttons.addEventListener('click', clickIt);
+
+
+// SCROLL EVENT
+function scrollIt(event) {
+    event.target.style.border = '1px solid black';
+    event.target.style.width = '200px';
+    event.target.style.height = '300px';
+    event.target.style.overflow = 'scroll';
+}
+wordDiv.addEventListener('scroll', scrollIt);
+
+// SELECT EVENT
+function selectIt(event){
+    event.target.style.backgroundColor = 'green';
+    event.target.style.textColor = 'white';
+};
+copyRight.addEventListener('select', selectIt);
