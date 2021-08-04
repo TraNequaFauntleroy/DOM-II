@@ -12,7 +12,7 @@ const wordDiv = document.querySelectorAll('.content-section');
 console.log('word div:', wordDiv);
 const boatPic = document.querySelector('.content-destination img');
 console.log('boat pic:',boatPic);
-const buttons = document.querySelectorAll('.destination btn');
+const buttons = document.querySelectorAll('.btn');
 console.log('buttons:', buttons);
 const copyRight = document.querySelector('.footer p');
 console.log('copyright:', copyRight);
@@ -31,18 +31,22 @@ headLine.addEventListener('mouseout', mouseOut);
 
 // KEYDOWN EVENT
 function escapeKey(event){
-    if (event.key === 'Escape'){
-        alert(document.style.borderColor = "pink", event.target.style.boarderSize = "5px");
-        }
+   alert(event.target.style.border = '3px solid pink');
     };
 yellowBus.addEventListener('keydown', escapeKey);
 
-// // ONCLICK EVENT
+// ONCLICK EVENT
 function clickIt(event){
     window.location = 'https://www.buses.com/'
 };
 buttons.addEventListener('click', clickIt);
 
+
+//DOUBLE CLICK EVENT 
+function dblClick(event){
+    window.location = 'https://www.instagram.com/nenethecreative/'
+}
+boatPic.addEventListener('dblclick', dblClick);
 
 // SCROLL EVENT
 function scrollIt(event) {
